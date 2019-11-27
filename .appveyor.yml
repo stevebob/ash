@@ -34,7 +34,7 @@ after_build:
 
       copy target\debug\triangle.exe tmp\triangle.exe
 
-      powershell.exe -nologo -noprofile -command "& { Add-Type -A 'System.IO.Compression.FileSystem'; [IO.Compression.ZipFile]::CreateFromDirectory('tmp', triangle.zip'); }"
+      powershell.exe -nologo -noprofile -command "& { Add-Type -A 'System.IO.Compression.FileSystem'; [IO.Compression.ZipFile]::CreateFromDirectory('tmp', 'triangle.zip'); }"
 
 artifacts:
 - path: "triangle.zip"
